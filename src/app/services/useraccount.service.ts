@@ -12,7 +12,7 @@ export class UseraccountService {
     
     create(user: Useraccount) {
         console.log('Creating user  ' + user.username); 
-        return this.http.post('$https://fbatracker-rest.herokuapp.com/api/v1/useraccount', user, (response: Response) => response.json());
+        return this.http.post('https://fbatracker-rest.herokuapp.com/api/v1/useraccount', user, (response: Response) => response.json());
     }
     
     // private helper methods
