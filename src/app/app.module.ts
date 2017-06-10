@@ -9,6 +9,9 @@ import { LoginComponent } from './login/login.component';
 import {routing} from './app.routing';
 import { RegisterComponent } from './register/register.component';
 
+import {UseraccountService} from './services/useraccount.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,7 @@ import { RegisterComponent } from './register/register.component';
     HttpModule,
     routing
   ],
-  providers: [],
+  providers: [UseraccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
