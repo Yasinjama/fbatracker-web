@@ -12,6 +12,7 @@ import { RegisterComponent } from './register/register.component';
 import {UseraccountService} from './services/useraccount.service';
 import {AuthenticationService} from './services/authentication.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthGuard } from './guards/auth.guard';
 
 
 @NgModule({
@@ -27,7 +28,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HttpModule,
     routing
   ],
-  providers: [UseraccountService, AuthenticationService],
+  providers: [UseraccountService, AuthenticationService, AuthGuard,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
