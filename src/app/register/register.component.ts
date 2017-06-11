@@ -1,22 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import {UseraccountService} from '../services/useraccount.service';
+import {Useraccount} from '../models/useraccount';
 import { Router } from '@angular/router';
-import { Useraccount } from '../models/useraccount';
 
-import {UserService} from '../services/user.service';
-
-@Component( {
-    selector: 'app-register',
-    templateUrl: './register.component.html',
-    styleUrls: ['./register.component.css']
-} )
+@Component({
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
+})
 export class RegisterComponent implements OnInit {
 
-    model: any = {};
-    errorMessage: string;
+ model: any = {};
 
     constructor(private router: Router,
-            private userService: UserService
+            private userService: UseraccountService
             ) { }
+
+  ngOnInit() {
+  }
 
     register(){
         console.log(">> register() user ",this.model.username);
@@ -33,8 +34,4 @@ export class RegisterComponent implements OnInit {
          );
         console.log("<< register() user ");
     }
-    ngOnInit() {
-    }
-
-    get diagnostic() { return JSON.stringify( this.model ); }
 }

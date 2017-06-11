@@ -5,18 +5,17 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import {routing} from './app.routing';
 import { RegisterComponent } from './register/register.component';
 
-import {UserService} from './services/user.service';
-
-import { routing }        from './app.routing';
+import {UseraccountService} from './services/useraccount.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -24,9 +23,7 @@ import { routing }        from './app.routing';
     HttpModule,
     routing
   ],
-  providers: [
-              UserService
-              ],
+  providers: [UseraccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
