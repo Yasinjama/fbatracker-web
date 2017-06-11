@@ -11,13 +11,15 @@ import { RegisterComponent } from './register/register.component';
 
 import {UseraccountService} from './services/useraccount.service';
 import {AuthenticationService} from './services/authentication.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,7 @@ import {AuthenticationService} from './services/authentication.service';
     HttpModule,
     routing
   ],
-  providers: [UseraccountService,AuthenticationService],
+  providers: [UseraccountService, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

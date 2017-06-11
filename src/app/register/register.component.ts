@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
                  data => {
                      console.log("User successfully created");
                      this.router.navigate(['/login'])
-                     
+
                  },
                  erro => {
                      console.log("Failed to create user");

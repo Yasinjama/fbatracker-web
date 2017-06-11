@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
             .subscribe(
                 data => {
                       console.log('Authentication is successfull ' + data);
-//                    this.router.navigate([this.returnUrl]);
+                    this.router.navigate(['/dashboard']);
                 },
                 error => {
 //                    this.alertService.error(error);
