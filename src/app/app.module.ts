@@ -10,6 +10,7 @@ import {routing} from './app.routing';
 import { RegisterComponent } from './register/register.component';
 
 import {UseraccountService} from './services/useraccount.service';
+import {AuthenticationService} from './services/authentication.service';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import {UseraccountService} from './services/useraccount.service';
     HttpModule,
     routing
   ],
-  providers: [UseraccountService],
+  providers: [UseraccountService,AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
