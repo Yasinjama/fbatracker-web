@@ -15,6 +15,9 @@ export class UseraccountService {
         return this.http.post(`${this.baseUrl}/useraccount`, user, (response: Response) => response.json());
     }
 
+    delete(username: string) {
+      return this.http.delete(`${this.baseUrl}/useraccount/` + username, this.jwt()).map((response: Response) => response.json());
+    }
     // private helper methods
 
     private jwt() {

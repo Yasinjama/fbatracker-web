@@ -1,4 +1,5 @@
 <p>
   	{{currentUser.username}} Log in Successful!
-  	<a [routerLink]="['/login']">Logout</a>
+  	<a [routerLink]="['/login']">Logout</a><br>
+  	<a (click)="deleteUser()">Delete Account</a>
 </p>
