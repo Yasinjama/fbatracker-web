@@ -4,8 +4,8 @@
 	z-index: 3;
 	height: 44px;
 	background-color: #3498db;
-	border-bottom: 3px solid #ecf0f1;
-}
+/* 	border-bottom: 3px solid #ecf0f1;
+ */}
 /* logo in header(mobile version) and side-nav (tablet & desktop) */
 .logo {
 	height: 44px;
