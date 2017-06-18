@@ -1,52 +1,66 @@
-<nav id="navbar-darkgreen" class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <span><a class="navbar-brand" href="/">FBA Tracker</a></span>
-  </div>
-
-  <div class="navbar-collapse collapse sidebar-navbar-collapse">
-
-      <div class="container-fluid">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/"><span class="glyphicon glyphicon-user"></span>{{currentUser.username}}</a></li>
-          <li><a [routerLink]="['/login']"><span class="glyphicon glyphicon-off"></span> Sign Off</a></li>       
-        </ul>
+    <div class="header">
+        <a href="#" class="nav-trigger"><span></span></a>
+        <a [routerLink]="['/login']" class="nav-signout">
+        <span><i class="fa fa-sign-out"></i></span>
+        <span>Logout</span>
+        </a>
     </div>
-
-    <div id="dashboard-darkgreen" class="dashboard-nav">
-      <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-dashboard"></span> Dashboard <b></b></a>
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-list-alt"></span> Expenses <b></b></a>
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-usd"></span> Profit <b></b></a>
-           <a href="/"><span class="glyphicon glyphicon-plus"></span> Account</a>
-          <a href="/"><span class="glyphicon glyphicon-cog"></span> Settings</a>
-          <a href="/"><span class="glyphicon glyphicon-comment"></span> Notifications</a> 
-        </li>
-      </ul>
-
-    </div> <!--/.sidebar-nav --> 
-
-  </div>
-</nav>
-
-<main id="page-wrapper5">
-  <div class="container">
-  <div class="row">
-    <div class="col-sm-4 panel panel-default">
-      <div class="panel-body">Expenses</div>
+    <div class="side-nav">
+        <div class="logo">
+            <i class="fa fa-tachometer"></i>
+            <span>FBATracker</span>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">
+                        <span><i class="fa fa-tachometer"></i></span>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span><i class="fa fa-product-hunt"></i></span>
+                        <span>Products</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#">
+                        <span><i class="fa fa-money"></i></span>
+                        <span>Sales</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span><i class="fa fa-user"></i></span>
+                        <span>Account</span>
+                    </a>
+                </li>
+                 <li class="mobile-signout">
+                    <a [routerLink]="['/login']">
+                        <span><i class="fa fa-sign-out"></i></span>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <div class="col-sm-4 panel panel-default">
-      <div class="panel-body">Sales</div>
-    </div>
-     <div class="col-sm-4 panel panel-default">
-      <div class="panel-body">Profit</div>
-    </div>
-  </div>
-</div>
-</main>
+<div class="main-content">
+            <div class="title">
+                Dashboard
+            </div>
+            <div class="main">
+                <div class="widget">
+                    <div class="title">Number of items</div>
+                    <div class="chart"></div>
+                </div>
+                <div class="widget">
+                    <div class="title">Expenses</div>
+                    <div class="chart"></div>
+                </div>
+                <div class="widget">
+                    <div class="title">Profit</div>
+                    <div class="chart"></div>
+                </div>
+            </div>
+        </div>
