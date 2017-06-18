@@ -5,8 +5,8 @@ import 'rxjs/add/operator/map'
 
 @Injectable()
 export class AuthenticationService {
-//  private baseUrl = 'https://fbatracker-rest.herokuapp.com/api/v1';
-  private baseUrl = 'http://localhost:8080/api/v1';
+  private baseUrl = 'https://fbatracker-rest.herokuapp.com/api/v1';
+  //private baseUrl = 'http://localhost:8080/api/v1';
   
   constructor(private http: Http) { }
 

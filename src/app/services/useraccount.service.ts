@@ -6,8 +6,8 @@ import {Useraccount} from '../models/useraccount';
 @Injectable()
 export class UseraccountService {
 
-//  private baseUrl = 'https://fbatracker-rest.herokuapp.com/api/v1';
-  private baseUrl = 'http://localhost:8080/api/v1';
+  private baseUrl = 'https://fbatracker-rest.herokuapp.com/api/v1';
+  //private baseUrl = 'http://localhost:8080/api/v1';
     constructor(private http: Http) { }
 
     create(user: Useraccount) {

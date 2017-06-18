@@ -121,7 +121,6 @@
 	padding-top: 44px;
 	height: 100%;
 	overflow: scroll;
-	background-color: #bdc3c7;
 }
 .main-content .title {
 	background-color: #eef1f7;
@@ -185,7 +184,6 @@
 	}
 	.main-content {
 		margin-left: 70px;
-		background-color: #bdc3c7;
 	}
 }
 /* set element styles for desktop */
